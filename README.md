@@ -6,14 +6,12 @@
 
 Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”.
 
----
-
-## Features
+### *Features*
 - [ ] A “work” timer that counts down to zero (usually 25 minutes)
 - [ ] A second “break” timer that counts down to zero (usually 5 minutes)
 - [ ] Buttons to start a session, pause the timer, or cancel the session and restart
 
-## Stretch goals
+### *Stretch goals*
 - [ ] Customisable lengths of time for work/break
 - [ ] Play an alarm sound to make it obvious the time is up
 
@@ -45,25 +43,23 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
 
 ## Things I Learnt
 
-***Issue***
+***Issue 1 -***
 When i was cloning my github repo to my local terminal, i ran the SSH link but kept getting this error.
-        zsh: no such file or directory: https://github.com/fac21/safia-timer.git
 
-***Solution***
+     zsh: no such file or directory: https://github.com/fac21/safia-timer.git
+
+***Solution 1 -***
 I forgot to add `git clone` before adding the SSH link. :see_no_evil: :joy:
 
-***Issue***
-***Solution***
+***Issue 2 -*** I wanted to add a boiler HTML template using the Emmet abbreviation `!`. It wouldn't work. 
 
-***Issue***
-***Solution***
+***Solution 2 -*** I was adding `!` to an untitled file so i was unable to access the boilerplate. Once is saved the file with html extension `index.html` it worked.:exclamation: 
 
-***Issue***
-***Solution***
+***Issue 3 -***
+***Solution 3-***
 
----
-
-
+***Issue 4 -***
+***Solution 4-***
 
 
 ---
