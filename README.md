@@ -33,12 +33,13 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
     - [ ] ringing bell sound when short break over
     - [ ] ticking sound for long break starts
     - [ ] ringing bell sound when long break over
-  - [ ]Vibrations when end of interval/break, along with ringing sound.
+  - [ ] Vibrations when end of interval/break, along with ringing sound.
   - [ ] Background color changes with pomodoro interval/break
-  - [ ] 
+  
 -  I created a new repo in github, with a README.md file. I used SSH to git clone the repo in my local terminal
 -  I created a index.html and decided to add `style` and `script` tags instead of creating separate files. If the script code gets tolong I may create a separate `script.js` file.
--  
+  
+  
 ---
 
 ## Things I Learnt
