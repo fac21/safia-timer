@@ -1,88 +1,132 @@
-
-*{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height:100vh;
-    background-color: white;
-    color:black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  height: 100vh;
+  background-color: #a8dadc;
+  color: rgb(29, 53, 87);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-h1{
-    color: red;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin: 0 auto;
-    padding: 2rem;
+h1 {
+  color: #e63946;
+  font-family:'Playfair Display', serif;
+  font-size: 2.1rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 6rem 0 3rem 0 ;
 }
-#container{
-    height: 12rem;
-    width: 80%;
-    background-color: green;
-    margin: 0 auto;
-    border: 5px solid red;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+#container {
+  height: 14rem;
+  max-width: 20rem;
+  background-color: #f1faee;
+  margin: 0 auto;
+  padding: 1rem 0;
+  border: 5px solid rgb(69, 123, 157);;
+  border-radius: 1rem;
+  box-shadow: 0 0.9rem 1.5rem rgb(0 0 0 / 50%);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.5rem;
 }
 /*Timers*/
-.label{
-    align-self: center;
-    justify-self: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding:1rem;
+.label {
+  align-self: center;
+  justify-self: center;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.2rem;
 }
-#interval{
-    grid-area: 1/2/1/2;
+#interval {
+  grid-area: 1/2/1/2;
 }
-#round{
-    grid-area: 1/3/1/3;
+#round {
+  grid-area: 1/3/1/3;
 }
-#short-break{
-    grid-area:1/4/1/4;
+#short-break {
+  grid-area: 1/4/1/4;
 }
-#long-break{
-    grid-area: 1/5/1/5;
+#long-break {
+  grid-area: 1/5/1/5;
 }
-.timer{
-    display:flex;
-    align-self: center;
-    justify-self:center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    
+.timer {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  color: rgb(69, 123, 157);
+  font-size: 1rem;
+  font-weight: bold;
 }
-#interval-timer{
-    grid-area: 2/2/2/2;
+#interval-timer {
+  grid-area: 2/2/2/2;
 }
-#cycle-counter{
-    grid-area: 2/3/2/3;
+#cycle-counter {
+  grid-area: 2/3/2/3;
+  color: #e63946;
 }
-#shortBreak-timer{
-    grid-area:2/4/2/4;
+#short-break-timer {
+  grid-area: 2/4/2/4;
 }
-#longBreak-timer{
-    grid-area: 2/5/2/5;
+#long-break-timer {
+  grid-area: 2/5/2/5;
 }
 /*Buttons*/
-.btn{
-    align-self: center;
-    justify-self:center;
-    width: 80%;
-    height: 1.5rem;
+.btn {
+  justify-self:flex-end;
+  background-color: transparent;
+  margin-bottom: 0 auto;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out
+}
+#start {
+  grid-area: 3/2/3/2;
+}
+#reset {
+  grid-area: 3/3/3/3;
+}
+#stop {
+  grid-area: 3/4/3/4;
+}
+form{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    max-width: 14rem;
+    margin: 2rem auto;
+   
+}
+form button {
+    background:#f1faee;
+    width:5rem;
+    margin: 1rem auto;
+    color: rgb(29, 53, 87);
+    padding: 0.5rem 0rem;
+    border-radius: 0.5rem;
     font-size: 1rem;
+}
+form label{
+    /* margin-top: 1rem; */
     
+   
 }
-#start{
-    grid-area: 3/2/3/2;
+form input{
+    width: 2.5rem;
+    text-align: right;
+    margin-left:1rem;
 }
-#reset{
-    grid-area: 3/3/3/3;
+#interval-time{
+    margin-left:3rem;
 }
-#stop{
-    grid-area: 3/4/3/4;
+#long-break-time{
+    margin-left:1.4rem;
+}
+.input{
+    margin-top: 1rem;
 }

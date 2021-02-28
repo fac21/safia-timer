@@ -47,24 +47,30 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
 ***Issue 1 -***
 When i was cloning my github repo to my local terminal, i ran the SSH link but kept getting this error.
 
-     zsh: no such file or directory: https://github.com/fac21/safia-timer.git
+```zsh
+zsh: no such file or directory: https://github.com/fac21/safia-timer.git
+```
 
 ***Solution 1 -***
 I forgot to add `git clone` before adding the SSH link. :see_no_evil: :joy:
+
+---
 
 ***Issue 2 -*** I wanted to add a boiler HTML template using the Emmet abbreviation `!`. It wouldn't work. 
 
 ***Solution 2 -*** I was adding `!` to an untitled file so i was unable to access the boilerplate. Once is saved the file with html extension `index.html` it worked.:exclamation: 
 
+---
 ***Issue 3 -*** VS code live server was opening a listing directory instead of running the code in the browser. ![Screenshot of listing directory](listing-directory.png)
-(To take a screen shot on a mac press **Shift+Command+3** )
+(To take a screen shot on a *mac* press **Shift+Command+3** )
 
-***Solution 3-*** The folder where i saved my project files (hml, css, js) did not have a workspace assigned to it. So my files were pointing to the wrong path. I created a new folder "pomodoro-timer" in my fac21 folder on my desktop and opened VS code and opened new folder ("pomodoro-timer). I then opened the index.html file and the live sever worked!!! :smile: :smile:
+***Solution 3-*** The folder where i saved my project files (hml, css, js) did not have a workspace assigned to it. So my files were pointing to the wrong path. I created a new folder "pomodoro-timer" in my fac21 folder on my desktop and opened VS code and opened new folder ("pomodoro-timer). I then opened the index.html file and the live sever worked!!! :smile: :sparkles:
 
-I was able to solve this issue using this [Stack Overflow](https://stackoverflow.com/questions/55073031/why-is-vs-code-live-server-opening-a-directory-instead-of-running-the-code-in-th)article and [YouTube](https://www.youtube.com/watch?v=fpyzIDuK0wU)video. This YouTube video helped me learn more about [workspace](https://www.youtube.com/watch?v=W4xLtxLSm-o&t=26s).
+I was able to solve this issue using this [Stack Overflow](https://stackoverflow.com/questions/55073031/why-is-vs-code-live-server-opening-a-directory-instead-of-running-the-code-in-th) article and this [YouTube](https://www.youtube.com/watch?v=fpyzIDuK0wU) video. This YouTube video helped me learn more about [workspace](https://www.youtube.com/watch?v=W4xLtxLSm-o&t=26s).
 
-
+---
 ***Issue 4 -***
+
 ***Solution 4-***
 
 
@@ -72,6 +78,7 @@ I was able to solve this issue using this [Stack Overflow](https://stackoverflow
 
 ## Resources 
 
-- [Markdown Inserting Images](https://www.youtube.com/watch?v=afFb_DcBBdA) - YouTube video by Thomas Bradley 
-- [Medium](https://medium.com/markdown-monster-blog/getting-images-into-markdown-documents-and-weblog-posts-with-markdown-monster-9ec6f353d8ec)- Getting Images into Markdown Documents and Weblog Posts with Markdown Monster by Rick Strahi
-- 
+- [YouTube](https://www.youtube.com/watch?v=afFb_DcBBdA) - ***Markdown Inserting Images*** by Thomas Bradley
+- [Medium](https://medium.com/markdown-monster-blog/getting-images-into-markdown-documents-and-weblog-posts-with-markdown-monster-9ec6f353d8ec)- ***Getting Images into Markdown Documents and Weblog Posts with Markdown Monster*** by Rick Strahi
+- [codebase]() - ***Syntax highlighting in markdown*** by Dan Quinney
+- [icons8](https://icons8.com/) - *Icons, illustrations, photos, music, and design tools*
