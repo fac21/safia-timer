@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safia Pomodoro Timer</title>
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Safia's Pomodoro Timer</title>
 </head>
 <body>
-    <h1>Pomodoro Timer</h1>
-    <p> Instructions</p>
-    <ul>
-        <li>Set your pomodoro interval, short break and long break time.</li>
-        <li>Press START to begin your session.</li>
-        <li>Pressing STOP restarts the interval.</li>
-    </ul>
-    
-</body>
-<script>
+    <h1>Safia's Pomodero Timer</h1>
+    <!-- Main Container-->
+    <div id="container">
+        <p id="interval" class="label">Interval</p>
+        <p id="short-break" class="label">Short Break</p>
+        <p id="round" class="label">Round</p>
+        <p id="long-break" class="label">Long Break</p>
 
-</script>
+        <!-- Interval Timer-->
+        <div id="interval-timer" class="timer">
+            <p id="i-minutes">25</p>
+            <p id="semicolon">:</p>
+            <p id="i-seconds">00</p>
+        </div>
+
+        <!--Cycle Counter-->
+        <div id="cycle-counter" class="timer">
+            <p id="count">0</p>
+            <p id="forwardSlash">/</p>
+            <p id="max-count">4</p>
+        </div>
+
+        <!-- Short Break Timer-->
+        <div id="shortBreak-timer" class="timer">
+            <p id="sB-minutes">05</p>
+            <p id="semicolon">:</p>
+            <p id="sB-seconds">00</p>
+        </div>
+
+        <!-- Long Break Timer-->
+        <div id="longBreak-timer" class="timer">
+            <p id="lB-minutes">30</p>
+            <p id="semicolon">:</p>
+            <p id="lB-seconds">00</p>
+        </div>
+        
+        <!-- Buttons-->
+        <button id="start" class="btn"> START</button>
+        <button id="stop" class="btn">STOP</button>
+        <button id="reset" class="btn">RESET</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
