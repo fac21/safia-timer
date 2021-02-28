@@ -76,6 +76,7 @@ h1 {
 #long-break-timer {
   grid-area: 2/5/2/5;
 }
+
 /*Buttons*/
 .btn {
   justify-self:flex-end;
@@ -83,7 +84,12 @@ h1 {
   margin-bottom: 0 auto;
   border: none;
   cursor: pointer;
-  transition: 0.5s ease-in-out
+  transition: 0.5s ease-in-out;
+}
+.btn:hover{
+    transform: scale(1.5); 
+    transition: 0.5s ease-in-out;
+    background-color: transparent;
 }
 #start {
   grid-area: 3/2/3/2;
@@ -94,6 +100,7 @@ h1 {
 #stop {
   grid-area: 3/4/3/4;
 }
+/*Input Form*/
 form{
     height: 20%;
     display: flex;
@@ -111,14 +118,13 @@ form button {
     border-radius: 0.5rem;
     font-size: 1rem;
 }
-form label{
-    /* margin-top: 1rem; */
-    
-   
+button:hover{
+    background-color: rgb(69, 123, 157);
+    color:white;
 }
 form input{
     width: 2.5rem;
-    text-align: right;
+    text-align: center;
     margin-left:1rem;
 }
 #interval-time{
