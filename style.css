@@ -1,0 +1,88 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    background-color: white;
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    color: red;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+#container{
+    height: 12rem;
+    width: 80%;
+    background-color: green;
+    margin: 0 auto;
+    border: 5px solid red;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+/*Timers*/
+.label{
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:1rem;
+}
+#interval{
+    grid-area: 1/2/1/2;
+}
+#round{
+    grid-area: 1/3/1/3;
+}
+#short-break{
+    grid-area:1/4/1/4;
+}
+#long-break{
+    grid-area: 1/5/1/5;
+}
+.timer{
+    display:flex;
+    align-self: center;
+    justify-self:center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+#interval-timer{
+    grid-area: 2/2/2/2;
+}
+#cycle-counter{
+    grid-area: 2/3/2/3;
+}
+#shortBreak-timer{
+    grid-area:2/4/2/4;
+}
+#longBreak-timer{
+    grid-area: 2/5/2/5;
+}
+/*Buttons*/
+.btn{
+    align-self: center;
+    justify-self:center;
+    width: 80%;
+    height: 1.5rem;
+    font-size: 1rem;
+    
+}
+#start{
+    grid-area: 3/2/3/2;
+}
+#reset{
+    grid-area: 3/3/3/3;
+}
+#stop{
+    grid-area: 3/4/3/4;
+}
