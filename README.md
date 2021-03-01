@@ -69,10 +69,16 @@ I forgot to add `git clone` before adding the SSH link. :see_no_evil: :joy:
 I was able to solve this issue using this [Stack Overflow](https://stackoverflow.com/questions/55073031/why-is-vs-code-live-server-opening-a-directory-instead-of-running-the-code-in-th) article and this [YouTube](https://www.youtube.com/watch?v=fpyzIDuK0wU) video. This YouTube video helped me learn more about [workspace](https://www.youtube.com/watch?v=W4xLtxLSm-o&t=26s).
 
 ---
-***Issue 4 -***
+***Issue 4 -*** I kept getting this error when i clicked the start button. 
+```javaScript
+Uncaught TypeError: Cannot read property 'innerText' of null
+    at startInterval (script.js:28)
+```
 
-***Solution 4-***
-
+***Solution 4-*** I had a space bar when defining my id ('interval- sec)!!! Once i removed it countdown worked
+```javaScript
+const intervalSecs = document.getElementById("interval-secs");
+```
 
 ---
 

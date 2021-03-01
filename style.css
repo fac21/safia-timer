@@ -66,7 +66,7 @@ h1 {
 #interval-timer {
   grid-area: 2/2/2/2;
 }
-#cycle-counter {
+#round-counter{
   grid-area: 2/3/2/3;
   color: #e63946;
 }
@@ -95,10 +95,10 @@ h1 {
   grid-area: 3/2/3/2;
 }
 #reset {
-  grid-area: 3/3/3/3;
-}
-#stop {
   grid-area: 3/4/3/4;
+}
+#pause {
+  grid-area: 3/3/3/3;
 }
 /*Input Form*/
 form{
@@ -127,10 +127,10 @@ form input{
     text-align: center;
     margin-left:1rem;
 }
-#interval-time{
+#interval-input{
     margin-left:3rem;
 }
-#long-break-time{
+#long-break-input{
     margin-left:1.4rem;
 }
 .input{
