@@ -81,4 +81,6 @@ I was able to solve this issue using this [Stack Overflow](https://stackoverflow
 - [YouTube](https://www.youtube.com/watch?v=afFb_DcBBdA) - ***Markdown Inserting Images*** by Thomas Bradley
 - [Medium](https://medium.com/markdown-monster-blog/getting-images-into-markdown-documents-and-weblog-posts-with-markdown-monster-9ec6f353d8ec)- ***Getting Images into Markdown Documents and Weblog Posts with Markdown Monster*** by Rick Strahi
 - [codebase]() - ***Syntax highlighting in markdown*** by Dan Quinney
+- [coolors](https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557) - *Generate colour palattes *
 - [icons8](https://icons8.com/) - *Icons, illustrations, photos, music, and design tools*
+- [Week 1](https://github.com/fac21/pre-course/tree/main/semantic-html/safia) [Week 2](https://github.com/fac21/pre-course/tree/main/css-layout/safia) [Week 3](https://github.com/fac21/pre-course/tree/main/functions-callbacks-async/safia%20) - *FAC21 Pre-course challenges*
