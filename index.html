@@ -18,13 +18,13 @@
 
         <!-- Interval Timer-->
         <div id="interval-timer" class="timer">
-            <p id="i-minutes">25</p>
+            <p id="interval-mins">25</p>
             <p id="semicolon">:</p>
-            <p id="i-seconds">00</p>
+            <p id="interval-secs">00</p>
         </div>
 
         <!--Cycle Counter-->
-        <div id="cycle-counter" class="timer">
+        <div id="round-counter" class="timer">
             <p id="count">0</p>
             <p id="forward-slash">/</p>
             <p id="max-count">4</p>
@@ -32,36 +32,36 @@
 
         <!-- Short Break Timer-->
         <div id="short-break-timer" class="timer">
-            <p id="short-break-minutes">05</p>
+            <p id="short-break-mins">05</p>
             <p id="semicolon">:</p>
-            <p id="short-break-seconds">00</p>
+            <p id="short-break-secs">00</p>
         </div>
 
         <!-- Long Break Timer-->
         <div id="long-break-timer" class="timer">
-            <p id="long-break-minutes">30</p>
+            <p id="long-break-mins">30</p>
             <p id="semicolon">:</p>
-            <p id="long-break-seconds">00</p>
+            <p id="long-break-secs">00</p>
         </div>
         
         <!-- Buttons-->
         <button id="start" class="btn"><img src="icons8-tomato-50.png"></button>
         <button id="reset" class="btn"><img src="icons8-reset-50.png"></button>
-        <button id="stop" class="btn"><img src="icons8-pause-50.png"></button>
+        <button id="pause" class="btn"><img src="icons8-pause-50.png"></button>
     </div>
     <!-- Form-->
     <form action=".">
         <div class="input">
             <label for="set-interval">Set interval time</label>
-        <input type="number" value="1" id="interval-time"/>
+        <input type="number" value="1" id="interval-input"/>
         </div>
         <div class="input">
             <label for="set-short-break">Set short break time</label>
-            <input type="number" value="1" id="short-break-time"/>
+            <input type="number" value="1" id="short-break-input"/>
         </div>
         <div class="input">
             <label for="set-long-break">Set long break time</label>
-        <input type="number" value="1" id="long-break-time"/>
+        <input type="number" value="1" id="long-break-input"/>
         </div>
         <button type="submit">Save</button>
     </form>
