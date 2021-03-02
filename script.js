@@ -4,34 +4,34 @@ const pauseBtn= document.getElementById("pause");
 const resetBtn = document.getElementById("reset");
 
 const container = document.getElementById("container");
+const bell = document.querySelector("audio");
 
-const intervalMins = document.getElementById("interval-mins");
-const intervalSecs = document.getElementById("interval-secs");
+let intervalMins = document.getElementById("interval-mins");
+let intervalSecs = document.getElementById("interval-secs");
 
-const roundCounter = document.getElementById("count");
+let roundCounter = document.getElementById("count");
 
-const shortBreakMins = document.getElementById("short-break-mins");
-const shortBreakSecs = document.getElementById("short-break-secs");
+let shortBreakMins = document.getElementById("short-break-mins");
+let shortBreakSecs = document.getElementById("short-break-secs");
 
-const longBreakMins = document.getElementById("long-break-mins")
-const longBreakSecs = document.getElementById("long-break-secs")
+let longBreakMins = document.getElementById("long-break-mins")
+let longBreakSecs = document.getElementById("long-break-secs")
 
-const intervalTime = document.getElementById("interval-input");
-const shortBreakTime = document.getElementById("short-break-input");
-const longBreakTime = document.getElementById("long-break-input");
+let setIntervalMins = document.getElementById("interval-input");
+let setShortBreakMins = document.getElementById("short-break-input");
+let setLongBreakMins = document.getElementById("long-break-input");
 
 const interval = document.getElementById("interval-timer");
 
-
-
 document.querySelector('form').addEventListener('submit', (e)=>{
     e.preventDefault();
-    localStorage.setItem("interval-input", intervalTime.value);
-    localStorage.setItem("short-break-input", shortBreakTime.value);
-    localStorage.setItem("long-break-input", longBreakTime.value);
+    localStorage.setItem("interval-input", setIntervalMins.value);
+    localStorage.setItem("short-break-input", setShortBreakMins.value);
+    localStorage.setItem("long-break-input", setLongBreakMins.value);
+    intervalMins.innerText = setIntervalMins.value;
+    shortBreakMins.innerText = setShortBreakMins.value;
+    longBreakMins.innerText = setLongBreakMins.value;
 });
-
-
 
 let roundTimer;
 let shortBreakTimer;
@@ -43,6 +43,9 @@ function startRoundTimer() {
 
 function beginRound(){
     document.title = intervalMins.innerText + ":" + intervalSecs.innerText;
+    // intervalSecs.innerText < 10 ? '0' + intervalSecs.innerText : intervalSecs.innerText;
+    // intervalMins.innerText < 10 ? '0' + intervalMins.innerText : intervalMins.innerText;
+
     if (intervalSecs.innerText != 0){        
         intervalSecs.innerText--;
     }
@@ -50,7 +53,9 @@ function beginRound(){
         intervalSecs.innerText = 59;  
         intervalMins.innerText--; 
     }
-    else if(intervalMins.innerText == 0 && intervalSecs.innerText == 0 ){
+    else if(intervalMins.innerText == 00 && intervalSecs.innerText == 00 ){
+        container.style.border = "5px solid #e63946";
+        bell.play();
         roundCounter.innerText++;
         
         stopRoundTimer();
@@ -64,10 +69,10 @@ function beginRound(){
 }
 
 function stopRoundTimer() {
+    // container.style.border = "5px solid rgb(69, 123, 157)";
     clearInterval(roundTimer);
-    intervalMins.innerText = 00 ; //intervalTime;
-    intervalSecs.innerText = '05';
-    
+    intervalMins.innerText = setIntervalMins.value; 
+    intervalSecs.innerText = '00';
 }
 
 function startShortTimer() {
@@ -76,14 +81,15 @@ function startShortTimer() {
 
 function beginShort(){
     document.title = shortBreakMins.innerText + ":" + shortBreakSecs.innerText;
-    if(shortBreakSecs.innerText != 0){
+    if(shortBreakSecs.innerText != 00){
         shortBreakSecs.innerText--
     } 
-    else if (shortBreakMins.innerText != 0 && shortBreakSecs.innerText == 0){
+    else if (shortBreakMins.innerText != 00 && shortBreakSecs.innerText == 00){
         shortBreakSecs.innerText = 59;
         shortBreakMins.innerText--;
     } 
-    else if (shortBreakMins.innerText == 0 && shortBreakSecs.innerText == 0){
+    else if (shortBreakMins.innerText == 00 && shortBreakSecs.innerText == 00){
+        bell.play();
         stopShortTimer();
         startRoundTimer();
     }
@@ -91,8 +97,8 @@ function beginShort(){
 
 function stopShortTimer() {
     clearInterval(shortBreakTimer);
-    shortBreakMins.innerText = 0; //shortBreakTime;
-    shortBreakSecs.innerText = '05';
+    shortBreakMins.innerText = setShortBreakMins.value; 
+    shortBreakSecs.innerText = '00';
 }
 
 function startLongTimer() {
@@ -101,31 +107,31 @@ function startLongTimer() {
 
 function beginLong(){
     document.title = longBreakMins.innerText + ":" + longBreakSecs.innerText;
-    if(longBreakSecs.innerText != 0){
+    if(longBreakSecs.innerText != 00){
         longBreakSecs.innerText--;
     } 
-    else if (longBreakMins.innerText != 0 && longBreakSecs.innerText == 0){
+    else if (longBreakMins.innerText != 00 && longBreakSecs.innerText == 00){
         longBreakSecs.innerText = 59;
         longBreakMins.innerText--;
     }
-    else if (longBreakMins.innerText == 0 && longBreakSecs.innerText == 0){
+    else if (longBreakMins.innerText == 00 && longBreakSecs.innerText == 00){
+        bell.play();
         stopLongTimer();
         startRoundTimer();
     }
 }
 
 function stopLongTimer() {
-    roundCounter.innerText = 0;
+    roundCounter.innerText = 00;
     clearInterval(longBreakTimer);
-    longBreakMins.innerText = 00; //longBreakTime;
-    longBreakSecs.innerText = '10';
+    longBreakMins.innerText = setLongBreakMins.value;
+    longBreakSecs.innerText = '00';
 }
 
 // event listener for start button 
 startBtn.addEventListener('click', function(){
     if (!roundTimer){
         startRoundTimer();
-        
     } 
     else {
     alert('Timer is already running. ≧◠‿◠≦ ');

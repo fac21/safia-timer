@@ -27,13 +27,16 @@ h1 {
   background-color: #f1faee;
   margin: 0 auto;
   padding: 1rem 0;
-  border: 5px solid rgb(69, 123, 157);;
+  border: 5px solid rgb(69, 123, 157);
   border-radius: 1rem;
   box-shadow: 0 0.9rem 1.5rem rgb(0 0 0 / 50%);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 0.5rem;
+}
+.active{
+    border: 5px solid #e63946;
 }
 /*Timers*/
 .label {
@@ -136,3 +139,12 @@ form input{
 .input{
     margin-top: 1rem;
 }
+footer{
+    margin-top: 6rem;
+   
+  }
+.copyright p{
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }

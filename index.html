@@ -10,7 +10,7 @@
 <body>
     <h1>Safia's Pomodero Timer</h1>
     <!-- Main Container-->
-    <div id="container">
+    <div id="container"class="active" > 
         <p id="interval" class="label">Interval</p>
         <p id="short-break" class="label">Short Break</p>
         <p id="round" class="label">Round</p>
@@ -20,9 +20,11 @@
         <div id="interval-timer" class="timer">
             <p id="interval-mins">00</p>
             <p class="semicolon">:</p>
-            <p id="interval-secs">05</p>
+            <p id="interval-secs">00</p>
         </div>
-
+        <audio
+        src="http://soundbible.com/mp3/service-bell_daniel_simion.mp3"
+      ></audio>
         <!--Cycle Counter-->
         <div id="round-counter" class="timer">
             <p id="count">0</p>
@@ -34,14 +36,14 @@
         <div id="short-break-timer" class="timer">
             <p id="short-break-mins">00</p>
             <p class="semicolon">:</p>
-            <p id="short-break-secs">05</p>
+            <p id="short-break-secs">00</p>
         </div>
 
         <!-- Long Break Timer-->
         <div id="long-break-timer" class="timer">
             <p id="long-break-mins">00</p>
             <p class="semicolon">:</p>
-            <p id="long-break-secs">10</p>
+            <p id="long-break-secs">00</p>
         </div>
         
         <!-- Buttons-->
@@ -65,6 +67,15 @@
         </div>
         <button type="submit">Save</button>
     </form>
+    <footer>
+        <div class="copyright">
+            
+            <p> Coded by <a href="https://github.com/fi-ya" target="_blank">fi-ya</a>
+            </p>
+        </div>
+        
+        
+      </footer>
     <script src="script.js"></script>
 </body>
 </html>

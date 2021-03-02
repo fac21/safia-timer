@@ -16,7 +16,7 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
 - [ ] Play an alarm sound to make it obvious the time is up
 
 ---
-:tada: :confetti_ball: This is my [Pomodoro Timer](https://fac21.github.io/safia-timer/) made using HTML, CSS, vanilla JavaScript. :tada: :confetti_ball:
+:confetti_ball: :tada: This is my [Pomodoro Timer](https://fac21.github.io/safia-timer/) made using HTML, CSS, vanilla JavaScript. :tada: :confetti_ball:
 
 
 ## Process
@@ -26,17 +26,11 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
   - [x] Set pomodoro interval (0-60minutes)- default set to 25minutes.
   - [x] Set short break (0-60minutes)- default set to 5 minutes.
   - [x] Set long break (0-60minutes)- default set to 30 minutes.
-  - [] A START button, which when pressed changes to STOP.
+  - [-] A START button, which when pressed changes to STOP.
   - [x] A INTERVAL box which shows 0/4 at  the start and increases with each interval. At 4/4 , long break is activated after which the interval re-sets to 0/4.
-  - [ ] Sounds 
-    - [ ] ticking sound for pomodoro interval
-    - [ ] ringing bell sound when break starts
-    - [ ] ticking sound for short break
-    - [ ] ringing bell sound when short break over
-    - [ ] ticking sound for long break starts
-    - [ ] ringing bell sound when long break over
-  - [ ] Vibrations when end of interval/break, along with ringing sound.
-  - [ ] Background color changes with pomodoro interval/break
+  - [x] Bell at end of interval/break, 
+  - [x] Border color changes with pomodoro interval/break
+    - [-] Flashes red at 10second mark.
   
 -  I created a new repo in github, with a README.md file. I used SSH to git clone the repo in my local terminal
 -  I created a index.html and decided to add `style` and `script` tags instead of creating separate files. If the script code gets tolong I may create a separate `script.js` file.
@@ -104,7 +98,9 @@ document.title = intervalMins.innerText + ":" + intervalSecs.innerText;
 - When i tried to pause the short/long break timer it worked, as in it paused but then when you press the start button  
   - it starts to count from the interval timer and not continue with the short/long break timer.
 
-- 
+- I was unable to pad the timer with `0` when it was less than 10 secs
+  - i tried if/else statement, template literals, concatenate, padStart. Nothing worked! :sob: :sob: :sob: 
+  
 
 
 ---
