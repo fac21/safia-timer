@@ -91,11 +91,18 @@ const intervalSecs = document.getElementById("interval-secs");
   - startLongTimer - setInterval( beginLong)
   - stopLongTimer - clearInterval , reset round counter long break time
 
-I then 
+***Issue 6-*** I wanted to display the timer in the browser tab. I didn't know where to put the code as i had different counters for minutes and seconds
+```javascript
+document.title = intervalMins.innerText + ":" + intervalSecs.innerText;
+```
+***Solution 6-*** I put the code in all three start functions - startRoundTimer, startShortTimer, startLongTimer.
 
-***Issue 6-*** 
-***Solution 6-*** 
+***Unresolved Issues*** 
 
+- When i tried to pause the short/long break timer it worked, as in it paused but then when you press the start button  
+  - it starts to count from the interval timer and not continue with the short/long break timer.
+
+- 
 
 
 ---
