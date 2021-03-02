@@ -16,6 +16,8 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
 - [ ] Play an alarm sound to make it obvious the time is up
 
 ---
+:tada: :confetti_ball: This is my [Pomodoro Timer](https://fac21.github.io/safia-timer/) made using HTML, CSS, vanilla JavaScript. :tada: :confetti_ball:
+
 
 ## Process
 - I was aware of what a pomodoro timer was, but i did further research on the subject and got inspiration on my timers functionality from the [Apple Apps store](https://apps.apple.com/gb/app/be-focused-focus-timer/id973130201) 
