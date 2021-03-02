@@ -7,12 +7,12 @@
 Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”.
 
 ### *Features*
-- [ ] A “work” timer that counts down to zero (usually 25 minutes)
-- [ ] A second “break” timer that counts down to zero (usually 5 minutes)
-- [ ] Buttons to start a session, pause the timer, or cancel the session and restart
+- [x] A “work” timer that counts down to zero (usually 25 minutes)
+- [x] A second “break” timer that counts down to zero (usually 5 minutes)
+- [x] Buttons to start a session, pause the timer, or cancel the session and restart
 
 ### *Stretch goals*
-- [ ] Customisable lengths of time for work/break
+- [x] Customisable lengths of time for work/break
 - [ ] Play an alarm sound to make it obvious the time is up
 
 ---
@@ -21,11 +21,11 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
 - I was aware of what a pomodoro timer was, but i did further research on the subject and got inspiration on my timers functionality from the [Apple Apps store](https://apps.apple.com/gb/app/be-focused-focus-timer/id973130201) 
 
 - I decided on the what features I wanted my timer to have
-  - [ ] Set pomodoro interval (0-60minutes)- default set to 25minutes.
-  - [ ] Set short break (0-60minutes)- default set to 5 minutes.
-  - [ ] Set long break (0-60minutes)- default set to 30 minutes.
-  - [ ] A START button, which when pressed changes to STOP.
-  - [ ] A INTERVAL box which shows 0/4 at  the start and increases with each interval. At 4/4 , long break is activated after which the interval re-sets to 0/4.
+  - [x] Set pomodoro interval (0-60minutes)- default set to 25minutes.
+  - [x] Set short break (0-60minutes)- default set to 5 minutes.
+  - [x] Set long break (0-60minutes)- default set to 30 minutes.
+  - [] A START button, which when pressed changes to STOP.
+  - [x] A INTERVAL box which shows 0/4 at  the start and increases with each interval. At 4/4 , long break is activated after which the interval re-sets to 0/4.
   - [ ] Sounds 
     - [ ] ticking sound for pomodoro interval
     - [ ] ringing bell sound when break starts
@@ -38,7 +38,6 @@ Build a “[Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer”
   
 -  I created a new repo in github, with a README.md file. I used SSH to git clone the repo in my local terminal
 -  I created a index.html and decided to add `style` and `script` tags instead of creating separate files. If the script code gets tolong I may create a separate `script.js` file.
-  
   
 ---
 
@@ -79,6 +78,25 @@ Uncaught TypeError: Cannot read property 'innerText' of null
 ```javaScript
 const intervalSecs = document.getElementById("interval-secs");
 ```
+***Issue 5-*** I had one function `startInterval` which was doing several things at once, and i was calling it in the start button event listener. These are the issues it caused
+  - round counter was updating after the short break had happened
+  - the long break was only decreasing by one second after which the interval timer started again. 
+  
+***Solution 5-*** There were too many things going on in that one function. So i split everything up into smaller functions, whereby in all the start functions i set a setInterval()and in all the stop functions i set a clearInterval():
+
+  - startRoundTimer - setInterval( beginRound)
+  - stopRoundTimer - clearInterval , reset round time
+  - startShortTimer - setInterval( beginShort)
+  - stopShortTimer - clearInterval , reset short break time
+  - startLongTimer - setInterval( beginLong)
+  - stopLongTimer - clearInterval , reset round counter long break time
+
+I then 
+
+***Issue 6-*** 
+***Solution 6-*** 
+
+
 
 ---
 
