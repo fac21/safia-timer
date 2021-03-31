@@ -23,6 +23,7 @@ let setLongBreakMins = document.getElementById("long-break-input");
 
 const interval = document.getElementById("interval-timer");
 
+// event listener for save button 
 document.querySelector('form').addEventListener('submit', (e)=>{
     e.preventDefault();
     localStorage.setItem("interval-input", setIntervalMins.value);
@@ -33,22 +34,23 @@ document.querySelector('form').addEventListener('submit', (e)=>{
     longBreakMins.innerText = setLongBreakMins.value;
 });
 
-let roundTimer;
-let shortBreakTimer;
-let longBreakTimer;
+// initialize timers 
+let roundTimer, shortBreakTimer, longBreakTimer;
 
+// set interval for interval timer
 function startRoundTimer() {
     roundTimer = setInterval( beginRound, 1000);
 }
 
+
+// start interval timer function 
 function beginRound(){
     document.title = intervalMins.innerText + ":" + intervalSecs.innerText;
-    // intervalSecs.innerText < 10 ? '0' + intervalSecs.innerText : intervalSecs.innerText;
-    // intervalMins.innerText < 10 ? '0' + intervalMins.innerText : intervalMins.innerText;
 
-    if (intervalSecs.innerText != 0){        
+    if (intervalSecs.innerText != 0){  
         intervalSecs.innerText--;
     }
+
     else if (intervalMins.innerText != 0 && intervalSecs.innerText == 0){  
         intervalSecs.innerText = 59;  
         intervalMins.innerText--; 
@@ -68,6 +70,7 @@ function beginRound(){
     }
 }
 
+// stop interval timer function 
 function stopRoundTimer() {
     // container.style.border = "5px solid rgb(69, 123, 157)";
     clearInterval(roundTimer);
@@ -75,10 +78,12 @@ function stopRoundTimer() {
     intervalSecs.innerText = '00';
 }
 
+// set interval for short break timer
 function startShortTimer() {
     shortBreakTimer = setInterval(beginShort,1000);
 }
 
+// start short break timer function 
 function beginShort(){
     document.title = shortBreakMins.innerText + ":" + shortBreakSecs.innerText;
     if(shortBreakSecs.innerText != 00){
@@ -95,16 +100,19 @@ function beginShort(){
     }
 } 
 
+// stop short break timer function 
 function stopShortTimer() {
     clearInterval(shortBreakTimer);
     shortBreakMins.innerText = setShortBreakMins.value; 
     shortBreakSecs.innerText = '00';
 }
 
+// set interval for long break timer
 function startLongTimer() {
     longBreakTimer = setInterval( beginLong, 1000)   
 }
 
+// start long break timer function 
 function beginLong(){
     document.title = longBreakMins.innerText + ":" + longBreakSecs.innerText;
     if(longBreakSecs.innerText != 00){
@@ -121,6 +129,7 @@ function beginLong(){
     }
 }
 
+// stop long break timer function 
 function stopLongTimer() {
     roundCounter.innerText = 00;
     clearInterval(longBreakTimer);
